@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    font-family: 'Nunito', normal;
+}
+
+@layer components {
+    .hamburger-line {
+        @apply w-[30px] h-[2px] block my-2 bg-black;
+    }
+}
+
+.hamburger-active > span:nth-child(1) {
+    @apply rotate-45;
+}
+
+.hamburger-active > span:nth-child(3) {
+    @apply -rotate-45;
+}
+
+.hamburger-active > span:nth-child(2) {
+    @apply scale-0;
+}
+
+.nav-color {
+    @apply fixed bg-white shadow-lg z-[9999] bg-opacity-90;
+    backdrop-fillter: blur[5px];
+}
